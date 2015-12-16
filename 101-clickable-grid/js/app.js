@@ -1,7 +1,7 @@
 var ClickAble = {
     _template:'<div class="flex"></div>',
     _templateWrap:'<div class="box" ></div>',
-    render:function(data){
+    render:function(data){ //渲染
         var _this = this;
         var result = $(_this._template);
         result.text(data);
@@ -17,9 +17,9 @@ var ClickAble = {
             $("#clickable-grid").append(_wrap);
         }
     },
-    init:function(num){
-        this.logic(num);
-        $("#clickable-grid").on('click','.flex',function(){
+    init:function(num){ //初始化
+        this.logic(num);  //执行逻辑
+        $("#clickable-grid").on('click','.flex',function(){  //给每一个格子绑定点击事件
             console.log($(this).text());
         })
     }
