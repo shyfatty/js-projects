@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>clickable-grid</title>
+    <link href="../css/reset.css" rel="stylesheet" />
+    <script type="text/javascript" src="../js/jquery-2.1.3.min.js" ></script>
+    <script type="text/javascript" src="../js/app.js" ></script>
+    <style type="text/css">
+        .box{
+            display: box;
+            display: -webkit-box;
+            display: -moz-box;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .flex {
+            width: 100%;
+            display: block;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            box-flex: 1;
+            text-align: center;
+        }
+        .box-wrap{padding: 10px;}
+        .box-wrap .flex{border: 1px solid #cccccc;margin: 3px;}
+    </style>
+</head>
+<body>
+<div class="box-wrap" id="clickable-grid"></div>
+</body>
+<script type="text/javascript">
+    $(function(){
+        ClickAble.init(5);
+    });
+</script>
+</html>
