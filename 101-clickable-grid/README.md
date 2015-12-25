@@ -16,3 +16,23 @@ git checkout -b 'myBranchName'
 ## 额外要求
 - css使用flexbox
 - js使用event delegation
+
+
+说明 
+jq:
+<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+
+flexbox语法：
+.wrap{
+	display:box;
+}
+.inner{
+	-moz-box-flex:1.0; /* Firefox */
+	-webkit-box-flex:1.0; /* Safari 和 Chrome */
+	box-flex:1.0;
+	border:1px solid red;
+}
+
+event delegation 用法：
+
+$("#name").delegate('td','click',fn);
