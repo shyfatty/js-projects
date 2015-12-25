@@ -1,13 +1,13 @@
 var ClickAble = {
     _template:'<div class="flex"></div>',
     _templateWrap:'<div class="box" ></div>',
-    render:function(data){ //äÖÈ¾
+    render:function(data){ //æ¸²æŸ“
         var _this = this;
         var result = $(_this._template);
         result.text(data);
         return result;
     },
-    logic:function(num){
+    logic:function(num){  //é€»è¾‘
         var _this = this;
         for(var j = 0;j<num;j++){
             var _wrap = $(_this._templateWrap);
@@ -17,9 +17,9 @@ var ClickAble = {
             $("#clickable-grid").append(_wrap);
         }
     },
-    init:function(num){ //³õÊ¼»¯
-        this.logic(num);  //Ö´ÐÐÂß¼­
-        $("#clickable-grid").on('click','.flex',function(){  //¸øÃ¿Ò»¸ö¸ñ×Ó°ó¶¨µã»÷ÊÂ¼þ
+    init:function(num){ //åˆå§‹åŒ–
+        this.logic(num);  //Ö´æ‰§è¡Œé€»è¾‘
+        $("#clickable-grid").on('click','.flex',function(){  //ä¸ºæ¯ä¸€ä¸ªç›’å­ç»‘å®šç‚¹å‡»äº‹ä»¶
             console.log($(this).text());
         })
     }
